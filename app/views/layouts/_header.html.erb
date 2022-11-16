@@ -1,0 +1,9 @@
+<header class="border-bottom bg-white">
+  <div class="container d-flex align-items-center justify-content-between py-2">
+    <div>
+      <%= render 'layouts/logo' %>
+      <%= link_to "All restaurants", restaurants_path, class: "btn btn-light ms-2" %>
+    </div>
+    <%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-danger" %>
+  </div>
+</header>

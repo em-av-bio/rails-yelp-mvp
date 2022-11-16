@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "SEEDS IGNITION"
+puts "How many restaurants?"
+print "> "
+amount = gets.chomp.to_i
+
+amount.times do |seed|
+  Restaurant.create({ 
+    name: Faker::Restaurant.name,
+    address: Faker::Address.full_address,
+    category: %w(chinese italian japanese french belgian).sample
+  })
+  puts "Restaurant #{seed} created"
+end
+
+puts "#{amount} restaurants created!"
